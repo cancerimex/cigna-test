@@ -1,0 +1,7 @@
+import * as fromProvider from './provider.actions';
+
+describe('loadProviders', () => {
+  it('should return an action', () => {
+    expect(fromProvider.loadProviders().type).toBe('[Provider] Load Providers');
+  });
+});

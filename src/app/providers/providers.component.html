@@ -1,0 +1,6 @@
+<form [formGroup]="form">
+  <input type="text" name="search" placeholder="Search..." id="search" formControlName="search">
+</form>
+<div class="providers-container" *ngIf="providers">
+  <app-provider-card *ngFor="let provider of providers | filter: search" [provider]="provider"></app-provider-card>
+</div>

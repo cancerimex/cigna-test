@@ -1,12 +1,21 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ProvidersComponent } from './providers/providers.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        ProvidersComponent
       ],
+      imports: [
+        HttpClientTestingModule,
+        ReactiveFormsModule,
+        FormsModule
+      ]
     }).compileComponents();
   }));
 
@@ -22,10 +31,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('cigna-test');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('cigna-test app is running!');
-  });
 });

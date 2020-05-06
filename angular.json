@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cigna-test"
+    }
+  },
+  "defaultProject": "cigna-test",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
